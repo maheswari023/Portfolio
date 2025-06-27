@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Uma Maheswari | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+    }
+    section {
+      scroll-snap-align: start;
+    }
+  </style>
+</head>
+
+
+<body>
+<button id="toggle-theme"
+  style="position:fixed;top:10px;right:10px;padding:10px 15px;border:none;background:rgba(0,0,0,0.5);color:white;border-radius:5px;cursor:pointer;z-index:999;">
+  Toggle Glass Mode
+</button>
+
+  
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Uma Maheswari Munduru</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#connect">Connect</a></li>
+      <li><i id="dark-mode-toggle" class="fas fa-moon"></i></li>
+    </ul>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section id="home">
+    <div class="home-container">
+      <div class="content" data-aos="fade-up">
+        <h1>Hello, It's Me</h1>
+        <h2>Uma Maheswari</h2>
+        <h3>I'm an Engineering Student passionate about <span id="typing-text"></span></h3>
+        <a href="resume/Resume.pdf" target="_blank" download>View Resume</a>
+      </div>
+      <div class="profile-pic" data-aos="zoom-in" data-aos-delay="300">
+        <img src="images/profile.png" alt="Uma Maheswari"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <div class="info-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="info">
+        <p>I am a passionate developer, always eager to learn and grow. Here's a little more about me.</p>
+      </div>
+      <div class="info">
+        <p>With a background in web development, I specialize in creating user-friendly, visually appealing websites.</p>
+      </div>
+      <div class="info">
+        <p>I constantly strive to improve my skills and stay updated with the latest technologies.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2 data-aos="fade-up">Education</h2>
+    <div class="info-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="info">
+        <h3>2022 - Present</h3>
+        <p>Currently pursuing 6th semester at GMR Institute of Technology, affiliated with JNTUV, Rajam.</p>
+      </div>
+      <div class="info">
+        <h3>2020 - 2022</h3>
+        <p>Completed Higher Secondary Education at Narayana Jr College, Srikakulam.</p>
+      </div>
+      <div class="info">
+        <h3>2019 - 2020</h3>
+        <p>Completed Secondary Education at Visakha School, Srikakulam.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2 data-aos="fade-up">My Skills</h2>
+    <div class="info-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="info"><i class="fab fa-html5"></i> HTML</div>
+      <div class="info"><i class="fab fa-css3-alt"></i> CSS</div>
+      <div class="info"><i class="fab fa-js"></i> JavaScript</div>
+      <div class="info"><i class="fab fa-react"></i> React</div>
+      <div class="info"><i class="fab fa-python"></i> Python</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2 data-aos="fade-up">My Projects</h2>
+
+    <div class="project-card">
+      <div class="project-info" data-aos="fade-up">
+        <h3>🌦️ Weather App</h3>
+        <p>Real-Time Forecast app using OpenWeatherMap API.</p>
+        <ul>
+          <li>Displays live temperature, humidity, and weather conditions.</li>
+          <li>Responsive UI with interactive dark-blue theme.</li>
+          <li>City-based weather search functionality.</li>
+        </ul>
+        <a href="https://github.com/maheswari023/weather-app" target="_blank">🔗 View on GitHub</a>
+      </div>
+      <div class="project-image" data-aos="zoom-in" data-aos-delay="300">
+        <img src="images/weather.png" alt="Weather App Preview"/>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-info" data-aos="fade-up">
+        <h3>🎬 Movie Recommendation Website</h3>
+        <p>Front-End web project for discovering movies.</p>
+        <ul>
+          <li>Search and browse movies with visual layout.</li>
+          <li>Attractive cards styled with modern design.</li>
+          <li>Responsive and built using HTML, CSS, and JS.</li>
+        </ul>
+        <a href="https://github.com/maheswari023/movie-recommendation-app" target="_blank">🔗 View on GitHub</a>
+      </div>
+      <div class="project-image" data-aos="zoom-in" data-aos-delay="300">
+        <img src="images/movie.jpg" alt="Movie Site Preview"/>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-info" data-aos="fade-up">
+        <h3>🍽️ Dynamic Restaurant</h3>
+        <p>Delicious Bites – Dynamic Menu Website.</p>
+        <ul>
+          <li>Search and filter dishes in real-time.</li>
+          <li>Sort menu items by price.</li>
+          <li>Modern card designs and engaging animations using AOS.</li>
+          <li>Light/Dark mode toggle included.</li>
+        </ul>
+        <a href="https://github.com/maheswari023/Restaurant-website" target="_blank">🔗 View on GitHub</a>
+      </div>
+      <div class="project-image" data-aos="zoom-in" data-aos-delay="300">
+        <img src="images/restaurant.jpg" alt="Restaurant Finder Preview"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications">
+    <h2 data-aos="fade-up">Certifications</h2>
+    <div class="info-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="info">
+        <img src="images/coursera.png" alt="Gen AI Certificate" />
+        <a href="resume/Gen AI.pdf" target="_blank">Gen AI Certificate</a>
+      </div>
+      <div class="info">
+        <img src="images/hackerank.png" alt="SQL Basic Certificate" />
+        <a href="certificates/sql certificate.pdf" target="_blank">SQL Basic Certificate</a>
+      </div>
+       <div class="info">
+        <img src="images/aws.png" alt="AWS Certificate" />
+        <a href="certificates/aws certificate.pdf" target="_blank">AWS Certificate</a>
+      </div>
+       <div class="info">
+        <img src="images/sql_inter.png" alt="SQL Intermediate Certificate" />
+        <a href="certificates/sql intermediate certificate.pdf" target="_blank">SQL Intermediate Certificate</a>
+      </div>
+       <div class="info">
+        <img src="images/js_basic.png" alt="Javascript Basic Certificate" />
+        <a href="certificates/javascript_basic certificate.pdf" target="_blank">JavaScript Basic Certificate</a>
+      </div>
+       <div class="info">
+        <img src="images/js_inter.png" alt="Javascript Basic Certificate" />
+        <a href="certificates/javascript_intermediate certificate.pdf" target="_blank">JavaScript Intermediate Certificate</a>
+      </div>
+      
+     
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  
+  <section id="achievements" data-aos="fade-up">
+    <h2>Achievements</h2>
+    <div class="info-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="info">
+        <p>🏆 Secured 1st position in the International Talent Hunt Olympiad 2018.</p>
+      </div>
+      <div class="info">
+        <p>🚀 Won 1st place in INTERSTELLAR IMPOSTER competition at GMRIT StepCone 2024.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 data-aos="fade-up">Contact</h2>
+    <div class="info-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="info">
+        <p>Email: <a href="mailto:maheswari92004@gmail.com">maheswari92004@gmail.com</a></p>
+        <p>Phone: 8309808261</p>
+        <p>LinkedIn: 
+          <a href="https://www.linkedin.com/in/umamaheswari-munduru-868302289" target="_blank">
+            <i class="fab fa-linkedin"></i> Umamaheswari Munduru
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect / Get In Touch Section -->
+  <section id="connect" class="contact-section" style="padding: 60px 10%; background-color: #1e293b; border-radius: 20px; margin: 60px auto; max-width: 900px;">
+    <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain"
+      data-aos="fade-up" data-aos-delay="200"
+      style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px;">
+      <div style="display: flex; flex-direction: column;">
+        <label for="name" style="color: white; margin-bottom: 5px;">Your name</label>
+        <input type="text" name="name" placeholder="Your name" required style="padding: 12px; border-radius: 8px; border: none;">
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <label for="email" style="color: white; margin-bottom: 5px;">Email</label>
+        <input type="email" name="email" placeholder="Your email" required style="padding: 12px; border-radius: 8px; border: none;">
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <label for="subject" style="color: white; margin-bottom: 5px;">Subject</label>
+        <input type="text" name="subject" placeholder="Subject" style="padding: 12px; border-radius: 8px; border: none;">
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <label for="message" style="color: white; margin-bottom: 5px;">Drop your Message</label>
+        <textarea name="message" rows="4" placeholder="Drop your Message" style="padding: 12px; border-radius: 8px; border: none;"></textarea>
+      </div>
+      <div style="grid-column: span 2; text-align: center;">
+        <button type="submit" style="padding: 12px 30px; background: linear-gradient(to right, #00c6ff, #0072ff); color: white; font-weight: bold; border: none; border-radius: 10px; cursor: pointer;">
+          Submit
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("active");
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      easing: 'ease-in-out',
+      once: false  
+    });
+  </script>
+</body>
+</html>

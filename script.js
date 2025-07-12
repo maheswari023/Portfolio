@@ -30,7 +30,7 @@ document.getElementById('dark-mode-toggle').addEventListener('click', function()
 
 
 const typingText = document.getElementById("typing-text");
-const words = ["Web Development", "Coding", "Software Engineering"];
+const words = ["Web Development"];
 let wordIndex = 0, letterIndex = 0;
 
 function type() {

@@ -9,7 +9,9 @@ body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(to bottom, #c49bc4, #1e293b);
   color: white;
+  transition: background 0.5s, color 0.5s;
 }
+
 
 nav {
   position: sticky;
@@ -49,41 +51,19 @@ nav ul li a:hover {
   font-weight: 600;
 }
 
+
+.nav-links a.active {
+  border-bottom: 2px solid #FFD700;
+  color: #FFD700;
+}
+
+
 .hamburger {
   display: none;
   font-size: 28px;
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 5%;
-    background-color: #111;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-}
-
-h1, h2, h3 {
-  color: #00bcd4;
-}
-
-h2 {
-  text-align: center;
-}
 
 section {
   margin: 60px auto;
@@ -94,6 +74,11 @@ section {
   box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
   color: white;
   transition: transform 0.3s ease;
+  scroll-snap-align: start;
+}
+
+section:hover {
+  transform: translateY(-5px);
 }
 
 section:first-of-type,
@@ -101,9 +86,15 @@ section:first-of-type,
   margin-top: 150px;
 }
 
-section:hover {
-  transform: translateY(-5px);
+
+h1, h2, h3 {
+  color: #00bcd4;
 }
+
+h2 {
+  text-align: center;
+}
+
 
 .home-container {
   display: flex;
@@ -129,6 +120,7 @@ section:hover {
   order: -1;
 }
 
+
 .info-container {
   display: flex;
   justify-content: center;
@@ -151,6 +143,7 @@ section:hover {
   background: #3b4e66;
 }
 
+
 #skills .info {
   width: 150px;
   height: 50px;
@@ -162,6 +155,7 @@ section:hover {
 #skills .info i {
   font-size: 30px;
 }
+
 
 #certifications .info-container,
 #contact .info-container {
@@ -191,6 +185,7 @@ section:hover {
 #certifications a:hover {
   text-decoration: underline;
 }
+
 
 #projects {
   padding: 50px;
@@ -241,7 +236,68 @@ section:hover {
   border-radius: 10px;
 }
 
-@media screen and (max-width: 768px) {
+
+footer {
+  background: #0f172a;
+  text-align: center;
+  padding: 20px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+button, .btn {
+  transition: background 0.3s, transform 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background: #00aaff;
+  transform: scale(1.05);
+}
+
+
+a {
+  color: #66d9ef;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1abc9c;
+}
+
+
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 5%;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
   .project-card {
     flex-direction: column;
     text-align: center;
@@ -260,6 +316,7 @@ section:hover {
 
   .home-container .content {
     padding: 10px;
+    margin: 0;
   }
 
   .profile-pic img {
@@ -268,16 +325,8 @@ section:hover {
     margin-top: 20px;
   }
 
-  nav {
-    flex-wrap: wrap;
-  }
-
   .nav-links li {
     margin: 10px 0;
-  }
-
-  .nav-links {
-    width: 100%;
   }
 
   .info-container {
@@ -288,34 +337,53 @@ section:hover {
   .info-container div {
     margin-bottom: 20px;
   }
-
-  footer {
-    font-size: 14px;
-    padding: 15px;
-  }
 }
 
-footer {
+/* ===== Dark Mode Toggle ===== */
+.dark-mode {
   background: #0f172a;
-  text-align: center;
-  padding: 20px;
-  color: #ccc;
+  color: #f1f5f9;
 }
 
-button, .btn {
-  transition: background 0.3s, transform 0.3s ease;
+.dark-mode nav {
+  background: #1e293b;
 }
 
-button:hover, .btn:hover {
-  background: #00aaff;
-  transform: scale(1.05);
+.dark-mode section {
+  background: rgba(15, 23, 42, 0.9);
 }
 
-a {
-  color: #66d9ef;
-  transition: color 0.3s ease;
+.dark-mode .nav-links li a {
+  color: #e0e0e0;
 }
 
-a:hover {
-  color: #1abc9c;
+.dark-mode .nav-links a.active {
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
+}
+
+.dark-mode .project-card {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+
+.glass-mode {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.glass-mode nav {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.glass-mode section,
+.glass-mode .info-container .info,
+.glass-mode .project-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-mode a {
+  color: #00eaff;
 }

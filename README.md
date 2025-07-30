@@ -22,7 +22,7 @@ A modern, responsive portfolio website showcasing my skills, certifications, and
 
 - **HTML5** – Structure and content
 - **CSS3** – Styling and responsiveness
-- **JavaScript (Optional)** – Minor interactivity
+- **JavaScript** – Minor interactivity
 - **AOS Library** – Scroll animations
 
 ---
